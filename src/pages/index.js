@@ -55,7 +55,7 @@ const Portfolio = () =>{
       <header>
         <section className='' >
           {/* Header */}
-          <div className="flex items-center justify-between w-full h-[90px] px-8 py-8 shadow-lg">
+          <div className="flex items-center justify-between w-full h-[90px] px-8 py-8 shadow-lg fixed z-20">
             <div className="w-[200px]">
             </div>
             <nav className="">
@@ -205,7 +205,7 @@ const Portfolio = () =>{
         </div>
         <div className="w-[2px] h-full bg-gray-600 mt-12"></div>
       </div>
-      <main className="sm:px-[100px] px-5 ">
+      <main className="sm:px-[100px] px-5 min-w-full">
         
         {/* Home section */}
         <section className="w-full h-[500px] pt-[120px]">
@@ -290,14 +290,16 @@ const Portfolio = () =>{
             <div className="flex flex-row gap-7 lg:w-[800px] sm:w-[400px] w-auto">
               {/* Roles */}
               <div className="flex flex-col gap-4 ">
-                <button className="border-none px-2 py-1 text-gray-300 font-medium hover:bg-white hover:opacity-[0.6] cursor-pointer"
+                <button className={ expChoice.SAP ? "border-none px-2 py-1 text-[#F58F7C] font-medium cursor-pointer":
+                "border-none px-2 py-1 text-gray-300 font-medium hover:bg-white hover:opacity-[0.6] cursor-pointer"}
                 onClick={()=>setExpChoice({
                   SAP:true,
                   SISTMR:false
                 })}>
                   SAP
                 </button>
-                <button className="border-none px-2 py-1 text-gray-300 font-medium hover:bg-white hover:opacity-[0.6] cursor-pointer"
+                <button className={ expChoice.SISTMR ? "border-none px-2 py-1 text-[#F58F7C] font-medium cursor-pointer":
+                "border-none px-2 py-1 text-gray-300 font-medium hover:bg-white hover:opacity-[0.6] cursor-pointer"}
                 onClick={()=>setExpChoice({
                   SAP:false,
                   SISTMR:true
@@ -310,7 +312,7 @@ const Portfolio = () =>{
                 <div className="flex flex-col gap-2 text-gray-300">
                   <h1 className="text-[#D6D6D6] sm:text-xl text-md font-semibold">Cybersecurity Engineering Intern <a className="text-[#F58F7C] font-semibold">@SAP</a></h1>
                   <h3 className="sm:text-md text-xs">September 2022 – September 2022</h3>
-                  <ul className="list-disc text-gray-600 font-medium sm:text-md text-sm">
+                  <ul className="list-disc text-gray-600 font-medium sm:text-xl text-sm">
                     <li>
                     Improved the organization’s security posture by identifying and reporting on weaknesses in their
                     security policy
@@ -333,7 +335,7 @@ const Portfolio = () =>{
                 <div className="flex flex-col gap-2 text-gray-600">
                   <h1 className="text-[#D6D6D6] sm:text-xl text-md font-semibold">Research Intern <a href='https://cyberpritam.com' className="text-[#F58F7C] font-semibold">@SISTMR</a></h1>
                   <h3 className="sm:text-md text-xs text-[#D6D6D6]">Janaury 2022 – March 2022</h3>
-                  <ul className="list-disc  font-medium sm:text-md text-sm">
+                  <ul className="list-disc font-medium sm:text-xl text-sm">
                     <li>
                     Demonstrated cybersecurity expertise as a research intern in a cybersecurity program.
                     </li>
@@ -416,7 +418,7 @@ const Portfolio = () =>{
             </div>
           </div>
           <div className="lg:hidden text-3xl sm:text-5xl flex flex-row text-gray-600 justify-center gap-3 mt-7">
-            <a href='github.com/farhadanwari/' className="hover:text-[#F58F7C]">
+            <a href='https://github.com/farhadanwari' className="hover:text-[#F58F7C]">
               <AiOutlineGithub/>
             </a>
             <a href='https://medium.com/@farhadanwari58' className="hover:text-[#F58F7C]">
